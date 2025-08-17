@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - Golobe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #fff, #b3e9d6);
+        }
+        nav {
+            color: #000;
+            padding: 1rem;
+            display: flex;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .logo-img{
+            width: 20%;
+            height: auto;
+        }
+        .nav-links {
+            margin-top: 0.5rem;
+            display: flex;
+        }
+        .nav-links button {
+            background: #112211;
+            color: #fff;
+            font-family: Helvetica, sans-serif;
+            font-weight: 500;
+            font-size: smaller;
+            margin-right: 1rem;
+            border: none;
+            border-radius: 5px;
+            padding: 0.3rem 1rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .booking-container {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .booking-title {
+            text-align: center;
+            color: #112211;
+            margin-bottom: 2rem;
+        }
+        .booking-form {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #112211;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #b3e9d6;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        .submit-btn {
+            background: #112211;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: #224422;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Golobe Logo" class="logo-img" /></a>
+        </div>
+        <div class="nav-links">
+            <button><a href="packages.html">Packages</a></button>
+            <button><a href="bookings.html">Bookings</a></button>
+            <button><a href="gallery.html">Gallery</a></button>
+            <button><a href="contact.html">Contact</a></button>
+        </div>
+    </nav>
+    
+    <section class="booking-container">
+        <h1 class="booking-title">Book Your Trip</h1>
+        <form class="booking-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dates">Travel Dates</label>
+                <input type="date" id="dates" name="dates" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination" required>
+                    <option value="">Select Destination</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Canada">Canada</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="package">Package Selection</label>
+                <select id="package" name="package" required>
+                    <option value="">Select Package</option>
+                    <option value="Beach Paradise">Beach Paradise</option>
+                    <option value="Mountain Adventure">Mountain Adventure</option>
+                    <option value="City Explorer">City Explorer</option>
+                    <option value="Nature Retreat">Nature Retreat</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Book Now</button>
+        </form>
+    </section>
+</body>
+</html>

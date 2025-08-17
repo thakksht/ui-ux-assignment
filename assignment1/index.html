@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshat Nathani - Portfolio</title>
+    <favicon href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        #tagline {
+            font-style: italic;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        #aboutme-cont {
+            display: flex;
+            align-items: center;
+        }
+
+        #image-cont {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #aboutme-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.8s ease;
+        }
+
+        #aboutme-txt {
+            flex: 2;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #f4f4f4;
+        }
+
+        #skills-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #projects-list .project {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Welcome to My Portfolio</h1>
+        <p id="tagline">A glimpse into my projects and skills</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div id="aboutme-cont">
+            <div id="image-cont">
+                <img src="akshat.jpeg" id="aboutme-img" alt="Akshat Nathani" style="width: 200px; height: auto; border-radius: 50%;">
+            </div>
+            <div id="aboutme-txt">
+                <p>Hi, I'm Akshat Nathani, a passionate computer engineering student with a keen interest in web development and artificial intelligence. I love creating innovative solutions to real-world problems and continuously expanding my skill set.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div id="education-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Year</th>
+                        <th>GPA</th>
+                        <th>Relevant Coursework</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>B.E. Computer Engineering</td>
+                        <td>Thapar Institute of Engineering & Technology</td>
+                        <td>2023 - Present</td>
+                        <td>7.89/10</td>
+                        <td>OS, DBMS, Algorithms, AI, ML, Computer Networks, Software Development</td>
+                    </tr>
+                    <tr>
+                        <td>High School (CBSE)</td>
+                        <td>Maa Bharti Sr. Sec. School, Kota</td>
+                        <td>2018 - 2022</td>
+                        <td>76.4%</td>
+                        <td>PRMO Qualifier, IMO Regional Topper</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-list">
+            <ul>
+                <li>Programming Languages: C, C++, Python, JavaScript</li>
+                <li>Web Development: HTML, CSS, React.js</li>
+                <li>Database Management: MySQL, MongoDB</li>
+                <li>Tools & Technologies: Git, Docker, VS Code</li>
+                <li>Soft Skills: Teamwork, Problem Solving, Communication</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div id="projects-list">
+            <div class="project">
+                <h3><strong>E-Commerce Web Application</strong></h3>
+                <p><strong>Description:</strong> A full-stack e-commerce platform with user authentication, product catalog, shopping cart, and payment integration.</p>
+                <p><strong>Technologies:</strong> React.js, Node.js, Express.js, MongoDB, Stripe API, JWT Authentication</p>
+                <p><strong>Features:</strong> User registration/login, Product search & filtering, Shopping cart, Order management, Admin dashboard</p>
+                <p><strong>Links:</strong> 
+                    <a href="https://github.com/akshatnathanai/ecommerce-app" target="_blank">GitHub Repository</a> | 
+                    <a href="https://ecommerce-demo.netlify.app" target="_blank">Live Demo</a>
+                </p>
+            </div>
+            
+            <div class="project">
+                <h3><strong>Task Management System</strong></h3>
+                <p><strong>Description:</strong> A collaborative task management application with real-time updates and team collaboration features.</p>
+                <p><strong>Technologies:</strong> Python, Django, PostgreSQL, WebSocket, Bootstrap, Docker</p>
+                <p><strong>Features:</strong> Real-time task updates, Team collaboration, Progress tracking, File attachments, Notification system</p>
+                <p><strong>Links:</strong> 
+                    <a href="https://github.com/akshatnathanai/task-manager" target="_blank">GitHub Repository</a> | 
+                    <a href="#" target="_blank">Documentation</a>
+                </p>
+            </div>
+            
+            <div class="project">
+                <h3><strong>Machine Learning Price Predictor</strong></h3>
+                <p><strong>Description:</strong> A machine learning model to predict house prices based on various features with 85% accuracy.</p>
+                <p><strong>Technologies:</strong> Python, Scikit-learn, Pandas, NumPy, Matplotlib, Flask, HTML/CSS</p>
+                <p><strong>Features:</strong> Data preprocessing, Feature engineering, Multiple ML algorithms comparison, Web interface for predictions</p>
+                <p><strong>Links:</strong> 
+                    <a href="https://github.com/akshatnathanai/price-predictor" target="_blank">GitHub Repository</a> | 
+                    <a href="https://price-predictor-ml.herokuapp.com" target="_blank">Live Demo</a>
+                </p>
+            </div>
+            
+            <div class="project">
+                <h3><strong>Personal Finance Tracker</strong></h3>
+                <p><strong>Description:</strong> A mobile-responsive web app for tracking personal expenses and generating financial insights.</p>
+                <p><strong>Technologies:</strong> JavaScript, Chart.js, Local Storage API, CSS Grid, PWA</p>
+                <p><strong>Features:</strong> Expense categorization, Visual charts & reports, Budget planning, Offline functionality, Export data</p>
+                <p><strong>Links:</strong> 
+                    <a href="https://github.com/akshatnathanai/finance-tracker" target="_blank">GitHub Repository</a> | 
+                    <a href="https://finance-tracker-pwa.netlify.app" target="_blank">Live Demo</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h2>Contact Me</h2>
+        <div id="contact-info">
+            <p>If you would like to get in touch, feel free to reach out via email or connect with me on LinkedIn.</p>
+            <ul>
+                <li>Email: <a href="mailto:akshtwrk@gmail.com">akshtwrk@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/akshatnathanai/" target="_blank">linkedin.com/in/akshatnathanai</a></li>
+                <li>GitHub: <a href="https://github.com/thakksht" target="_blank">github.com/thakksht</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Akshat Nathani. All rights reserved.</p>
+    </footer>
+</body>
+</html>

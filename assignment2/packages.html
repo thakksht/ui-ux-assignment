@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages - Golobe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #fff, #b3e9d6);
+        }
+        nav {
+            color: #000;
+            padding: 1rem;
+            display: flex;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .logo-img{
+            width: 20%;
+            height: auto;
+        }
+        .nav-links {
+            margin-top: 0.5rem;
+            display: flex;
+        }
+        .nav-links button {
+            background: #112211;
+            color: #fff;
+            font-family: Helvetica, sans-serif;
+            font-weight: 500;
+            font-size: smaller;
+            margin-right: 1rem;
+            border: none;
+            border-radius: 5px;
+            padding: 0.3rem 1rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .packages-container {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .packages-title {
+            text-align: center;
+            color: #112211;
+            margin-bottom: 2rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background: #112211;
+            color: #fff;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        tr:hover {
+            background: #e6ffe6;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Golobe Logo" class="logo-img" /></a>
+        </div>
+        <div class="nav-links">
+            <button><a href="packages.html">Packages</a></button>
+            <button><a href="bookings.html">Bookings</a></button>
+            <button><a href="gallery.html">Gallery</a></button>
+            <button><a href="contact.html">Contact</a></button>
+        </div>
+    </nav>
+    
+    <section class="packages-container">
+        <h1 class="packages-title">Tour Packages</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package Name</th>
+                    <th>Price</th>
+                    <th>Duration</th>
+                    <th>Destination</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Beach Paradise</td>
+                    <td>$799</td>
+                    <td>5 days</td>
+                    <td>Maldives</td>
+                    <td>Relax on pristine beaches with crystal clear waters</td>
+                </tr>
+                <tr>
+                    <td>Mountain Adventure</td>
+                    <td>$599</td>
+                    <td>7 days</td>
+                    <td>Nepal</td>
+                    <td>Trek through breathtaking mountain landscapes</td>
+                </tr>
+                <tr>
+                    <td>City Explorer</td>
+                    <td>$499</td>
+                    <td>3 days</td>
+                    <td>Paris</td>
+                    <td>Discover iconic landmarks and rich culture</td>
+                </tr>
+                <tr>
+                    <td>Nature Retreat</td>
+                    <td>$699</td>
+                    <td>6 days</td>
+                    <td>Canada</td>
+                    <td>Experience pristine wilderness and wildlife</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

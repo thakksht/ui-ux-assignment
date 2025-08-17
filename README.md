@@ -8,8 +8,8 @@ This repository contains all my UI-UX assignments, along with their status, live
 
 | Assignment | Status | Live Demo | Directory Link |
 |------------|--------|-----------|----------------|
-| Assignment 1: [Name/Topic] | ✅ | [Live Link](https://#) | [View Code](./assignment-1) |
-| Assignment 2: [Name/Topic] | ✅ | [Live Link](https://...) | [View Code](./assignment-2) |
+| Assignment 1: [Name/Topic] | ✅ | [Live Link](https://#) | [View Code](./assignment1) |
+| Assignment 2: [Name/Topic] | ✅ | [Live Link](https://...) | [View Code](./assignment2) |
 | Assignment 3: [Name/Topic] | ⏳ | – | - |
 | Assignment 4: [Name/Topic] | ⏳ | – | – |
 

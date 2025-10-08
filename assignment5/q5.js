@@ -16,9 +16,7 @@ function processArray(numbers) {
 const inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const result = processArray(inputArray);
 
-document.getElementById('result').innerHTML = `
-    <p><strong>Original Array:</strong> [${result.original.join(', ')}]</p>
-    <p><strong>After removing odd numbers:</strong> [${result.evenNumbers.join(', ')}]</p>
-    <p><strong>After multiplying by 2:</strong> [${result.multiplied.join(', ')}]</p>
-    <p><strong>Sum of resulting numbers:</strong> ${result.sum}</p>
-`;
+console.log("Original Array:", result.original);
+console.log("After removing odd numbers:", result.evenNumbers);
+console.log("After multiplying by 2:", result.multiplied);
+console.log("Sum of resulting numbers:", result.sum);

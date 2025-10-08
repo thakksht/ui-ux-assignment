@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages - Golobe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="../assignment2/logo.png" alt="Golobe Logo" class="logo-img" /></a>
+        </div>
+        <div class="nav-links">
+            <button><a href="index.html" class="nav-link" data-page="index">Home</a></button>
+            <button><a href="packages.html" class="nav-link" data-page="packages">Packages</a></button>
+            <button><a href="bookings.html" class="nav-link" data-page="bookings">Bookings</a></button>
+            <button><a href="gallery.html" class="nav-link" data-page="gallery">Gallery</a></button>
+        </div>
+    </nav>
+    
+    <section class="packages-container">
+        <h1 class="packages-title">Tour Packages</h1>
+        <div class="filter-controls">
+            <label for="seasonFilter">Filter by Season:</label>
+            <select id="seasonFilter">
+                <option value="all">All Seasons</option>
+                <option value="summer">Summer</option>
+                <option value="winter">Winter</option>
+                <option value="spring">Spring</option>
+                <option value="autumn">Autumn</option>
+            </select>
+        </div>
+        <table id="packagesTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Destination</th>
+                    <th>Duration (Days)</th>
+                    <th>Base Price</th>
+                    <th>Season</th>
+                    <th>Final Price</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="packagesBody">
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="packages.js"></script>
+</body>
+</html>

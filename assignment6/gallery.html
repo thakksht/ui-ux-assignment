@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Golobe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="../assignment2/logo.png" alt="Golobe Logo" class="logo-img" /></a>
+        </div>
+        <div class="nav-links">
+            <button><a href="index.html" class="nav-link" data-page="index">Home</a></button>
+            <button><a href="packages.html" class="nav-link" data-page="packages">Packages</a></button>
+            <button><a href="bookings.html" class="nav-link" data-page="bookings">Bookings</a></button>
+            <button><a href="gallery.html" class="nav-link" data-page="gallery">Gallery</a></button>
+        </div>
+    </nav>
+    
+    <section class="gallery-container">
+        <h1 class="gallery-title">Destination Gallery</h1>
+        
+        <div class="gallery-grid" id="galleryGrid">
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

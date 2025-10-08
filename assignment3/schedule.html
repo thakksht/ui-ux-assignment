@@ -31,6 +31,41 @@
             </div>
         </section>
 
+        <section class="audio-welcome">
+            <div class="container">
+                <div class="audio-container">
+                    <div class="audio-content">
+                        <h2>Welcome Message</h2>
+                        <p>Listen to a special welcome message from our event organizers and get important updates about the schedule.</p>
+                        <div class="audio-player">
+                            <audio controls preload="metadata">
+                                <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+                                <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                        <div class="audio-info">
+                            <span class="audio-duration">Duration: 2:30</span>
+                            <span class="audio-type">Welcome & Guidelines</span>
+                        </div>
+                    </div>
+                    <div class="audio-visual">
+                        <div class="sound-wave">
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                            <div class="wave-bar"></div>
+                        </div>
+                        <p class="audio-description">Get personalized guidance for navigating TechFest 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="schedule-section">
             <div class="container">
                 <h2>Event Schedule</h2>
@@ -429,5 +464,94 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        // Audio controls and wave animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.querySelector('.audio-player audio');
+            const waveBars = document.querySelectorAll('.wave-bar');
+            
+            if (audio && waveBars.length > 0) {
+                // Animate wave bars when audio plays
+                audio.addEventListener('play', function() {
+                    waveBars.forEach((bar, index) => {
+                        bar.style.animationPlayState = 'running';
+                        bar.style.animationDelay = `-${index * 0.2}s`;
+                    });
+                });
+                
+                audio.addEventListener('pause', function() {
+                    waveBars.forEach(bar => {
+                        bar.style.animationPlayState = 'paused';
+                    });
+                });
+                
+                audio.addEventListener('ended', function() {
+                    waveBars.forEach(bar => {
+                        bar.style.animationPlayState = 'paused';
+                    });
+                });
+            }
+            
+            // Table row highlighting and status updates
+            const tableRows = document.querySelectorAll('.schedule-table tbody tr, .results-table tbody tr');
+            tableRows.forEach(row => {
+                row.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.zIndex = '10';
+                });
+                
+                row.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // Dynamic status color coding
+            const statusCells = document.querySelectorAll('.schedule-table tbody td:last-child');
+            statusCells.forEach(cell => {
+                const status = cell.textContent.trim().toLowerCase();
+                if (status.includes('completed')) {
+                    cell.style.color = '#34a853';
+                    cell.style.fontWeight = 'bold';
+                    cell.innerHTML = '✅ ' + cell.textContent;
+                } else if (status.includes('progress')) {
+                    cell.style.color = '#fbbc04';
+                    cell.style.fontWeight = 'bold';
+                    cell.innerHTML = '⏳ ' + cell.textContent;
+                } else if (status.includes('scheduled')) {
+                    cell.style.color = '#1a73e8';
+                    cell.style.fontWeight = 'bold';
+                    cell.innerHTML = '📅 ' + cell.textContent;
+                }
+            });
+            
+            // Add position medals to results
+            const positionCells = document.querySelectorAll('.results-table tbody td:nth-child(2)');
+            positionCells.forEach(cell => {
+                const position = cell.textContent.trim();
+                if (position === '1st') {
+                    cell.innerHTML = '🥇 ' + position;
+                    cell.style.color = '#FFD700';
+                } else if (position === '2nd') {
+                    cell.innerHTML = '🥈 ' + position;
+                    cell.style.color = '#C0C0C0';
+                } else if (position === '3rd') {
+                    cell.innerHTML = '🥉 ' + position;
+                    cell.style.color = '#CD7F32';
+                }
+            });
+            
+            // Add prize money formatting
+            const prizeCells = document.querySelectorAll('.results-table tbody td:last-child');
+            prizeCells.forEach(cell => {
+                if (cell.textContent.includes('₹')) {
+                    cell.innerHTML = '💰 ' + cell.textContent;
+                    cell.style.fontWeight = 'bold';
+                    cell.style.color = '#34a853';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

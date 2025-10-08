@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List</title>
+</head>
+<body>
+    <h1>TO DO List</h1>
+    <label for="title">Title:</label>
+    <input type="text" id="title">
+    <label for="description">Description:</label>
+    <input type="text" id="description">
+    <button id="addTask">Add Task</button>
+    <br>
+    <h2>Task List</h2>
+    <ol id="taskList"></ul>
+
+    <script>
+        const addTaskButton = document.getElementById('addTask');
+        const taskList = document.getElementById('taskList');
+
+        addTaskButton.addEventListener('click', () => {
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+
+            if (title && description) {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<strong>${title}</strong>: ${description}`;
+                taskList.appendChild(listItem);
+
+                document.getElementById('title').value = '';
+                document.getElementById('description').value = '';
+            } else {
+                alert('Please enter both title and description.');
+            }
+        });
+    </script>
+
+</body>
+</html>
